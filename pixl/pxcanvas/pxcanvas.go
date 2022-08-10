@@ -22,6 +22,7 @@ type PxCanvas struct {
 	mouseState  PxCanvasMouseState
 	appState    *apptype.State
 	reloadImage bool
+	showMouse   bool
 }
 
 func (pxCanvas *PxCanvas) Bounds() image.Rectangle {
