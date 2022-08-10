@@ -4,7 +4,7 @@ Several simple projects written in Go.
 
 ## Description
 
-Here use can find projects like: ...
+Here you can find projects like: ...
 
 ## Overview and purpose
 
