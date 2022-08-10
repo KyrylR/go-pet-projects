@@ -27,7 +27,7 @@ Goroutines, Channels, Wait Groups and bufio package
 
 The program is invoked according to the scheme:
 ```
-mgrep search_string search_dir
+go run ./mgrep [--searchterm SEARCHTERM] [--searchdir SEARCHDIR]
 ```
 
 [//]: # (## Content of the system &#40;system boundaries&#41;)
