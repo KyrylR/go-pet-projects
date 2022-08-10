@@ -1,1 +1,5 @@
-package mgrep
+package main
+
+func main() {
+
+}
