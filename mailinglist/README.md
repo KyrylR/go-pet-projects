@@ -1,10 +1,23 @@
 # MailingList - Microservice
 
+Microservice that provides the management of an email address list.
+
 ## Description
+
+Created a microservice that hosts two APIs - the gRPC API and the JSON API.
 
 ## Purpose
 
+The main goal of this work is to learn how to work with APIs and microservices 
+as well as to consolidate the knowledge gained.
+
 ## Product functions (brief description)
+
+* JSON and gRPC API servers.
+* Using goroutines to run both servers in the same application.
+* Using gRPC client API to communicate with the server using protocol buffers.
+* SQLite database integration.
+
 
 ## Dependencies
 
@@ -36,20 +49,14 @@ protoc --go_out=. --go_opt=paths=source_relative \
 ## Executing program
 
 The program is invoked according to the scheme:
+
+* Server
 ```
 go mod tidy
-go run ./pixl
+go run ./server
 ```
 
-[//]: # (For this project, we'll be creating a microservice that manages an email list, will be creating a)
-
-[//]: # ()
-[//]: # (JSON and gRPC API server will also be creating a gRPC API client to communicate with the server or utilizing)
-
-[//]: # ()
-[//]: # (protocol buffers will have the database backed by SQLite, will utilize good routines to run both servers)
-
-[//]: # ()
-[//]: # (in a single application and it's going to be a CLI project)
-
-
+* Client
+```
+go run ./client
+```
