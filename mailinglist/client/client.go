@@ -60,12 +60,12 @@ func getEmailBatch(client pb.MailingListServiceClient, count int, page int) {
 	}
 }
 
-func updateEmail(client pb.MailingListServiceClient, entry pb.EmailEntry) *pb.EmailEntry {
+func updateEmail(client pb.MailingListServiceClient, entry *pb.EmailEntry) *pb.EmailEntry {
 	log.Println("update email")
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	res, err := client.UpdateEmail(ctx, &pb.UpdateEmailRequest{EmailEntry: &entry})
+	res, err := client.UpdateEmail(ctx, &pb.UpdateEmailRequest{EmailEntry: entry})
 	logResponse(res, err)
 
 	return res.EmailEntry
@@ -97,13 +97,18 @@ func main() {
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
-	defer conn.Close()
+	defer func(conn *grpc.ClientConn) {
+		err := conn.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}(conn)
 	client := pb.NewMailingListServiceClient(conn)
 
-	// newEmail := createEmail(client, "9999@999.999")
-	// newEmail.ConfirmedAt = 10000
-	// updateEmail(client, *newEmail)
-	// deleteEmail(client, newEmail.Email)
+	newEmail := createEmail(client, "99999@999.999")
+	newEmail.ConfirmedAt = 10000
+	updateEmail(client, newEmail)
+	deleteEmail(client, newEmail.Email)
 
 	getEmailBatch(client, 3, 1)
 	getEmailBatch(client, 3, 2)
