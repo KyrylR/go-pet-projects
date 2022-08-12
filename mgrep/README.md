@@ -7,7 +7,7 @@ A custom `grep' that is capable of searching for entries in files.
 A grep clone that can do a simple substring search
 within files. It can also automatically search subdirectories.
 
-## Overview and purpose
+## Purpose
 
 To consolidate my knowledge in working with Go Modules & Packages,
 Goroutines, Channels, Wait Groups and bufio package
