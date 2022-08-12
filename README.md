@@ -5,9 +5,9 @@ Several simple projects written in Go.
 ## Description
 
 Here you can find projects like:
-* [MailingList - Microservice]()
-* [My grep clone]()
-* [Pixl App]()
+* [MailingList - Microservice](https://github.com/KyrylR/go-pet-projects/tree/main/mailinglist)
+* [My grep clone](https://github.com/KyrylR/go-pet-projects/tree/main/mgrep)
+* [Pixl App](https://github.com/KyrylR/go-pet-projects/tree/main/pixl)
 
 ---
 
