@@ -26,8 +26,9 @@ In addition, there is a pixel brush indicator.
 
 ### Dependencies
 
-* gcc compiler 
-* go version 1.9
+This project requires:
+* `gcc` compiler installed
+* `go` version 1.9
 
 ### Executing program
 
