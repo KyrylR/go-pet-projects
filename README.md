@@ -1,4 +1,4 @@
-# Pet Projects with Go
+# Pet Projects in Go
 
 Several simple projects written in Go.
 
